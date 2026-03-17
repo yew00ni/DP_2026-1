@@ -2,7 +2,7 @@ package practice.Ch01;
 
 import java.util.Iterator;
 
-public class BookShelf implements Iterable<Book> { // Java.lang 패키지에 있기 때문에 import할 필요 없음
+public class BookShelf implements Iterable<Book> { // Iterable은 Java.lang 패키지에 선언되어 있는데 Java.lang 패키지는 import할 필요 없음
 // public class BookShelf {
     private Book[] books; // 책 타입의 책 배열(배열에 의해 관리됨)
     private int last = 0;

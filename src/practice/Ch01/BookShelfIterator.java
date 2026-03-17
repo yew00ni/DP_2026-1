@@ -1,6 +1,6 @@
 package practice.Ch01;
 
-import java.util.Iterator; // Java가 기본으로 제공하는 패키지, 인터페이스, 제너릭
+import java.util.Iterator; // Java.util은 Java가 기본으로 제공하는 패키지, Iterator라는 인터페이스를 import하여 사용, 제너릭
 import java.util.NoSuchElementException;
 
 public class BookShelfIterator implements Iterator<Book> {
@@ -24,7 +24,7 @@ public class BookShelfIterator implements Iterator<Book> {
     @Override
     public Book next() { // 다음 책을 반환하는 메서드
         if (!hasNext()) { // 다음에 꺼내 올 책이 없는 경우
-            throw new NoSuchElementException(); // throw : 예외를 생성(JDK에 선언되어 있는)
+            throw new NoSuchElementException(); // throw : 예외를 생성(NoSuchElementException : JDK에 선언되어 있는 예외)
         }
         Book book = bookShelf.getBookAt(index); // index에 해당하는 책을 꺼내옴(반복자가 책꽂이에 접근)
         index++;

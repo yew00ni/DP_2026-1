@@ -18,7 +18,7 @@ public class Main {
 
         // 방법 1: 책꽂이에 클라이언트가 직접 접근해서 책을 꺼내는 방식
         System.out.println("Books in the bookshelf:");
-        for (int i=0; i< bookShelf.getLength(); i++) {
+        for (int i=0; i < bookShelf.getLength(); i++) {
             System.out.println("- " + bookShelf.getBookAt(i).getName());
         }
 
