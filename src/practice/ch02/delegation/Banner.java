@@ -1,0 +1,18 @@
+package practice.ch02.delegation;
+
+// 이미 제공되는 클래스
+public class Banner {
+    private String string;
+
+    public Banner(String string) {
+        this.string = string;
+    }
+
+    public void showWithParen() { // public void showWithParen() 부분 : 메소드 프로토타입
+        System.out.println("(" + string + ")");
+    }
+
+    public void showWithAster() {
+        System.out.println("*" + string + "*");
+    }
+}
