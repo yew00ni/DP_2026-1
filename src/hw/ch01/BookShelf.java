@@ -27,4 +27,15 @@ public class BookShelf implements Iterable<Book> {
     public Iterator<Book> iterator() {
         return new BookShelfIterator(this);
     }
+
+    // 지정한 장르의 책만 순회하는 Iterator
+    public Iterator<Book> iteratorByGenre(String genre) {
+        return new GenreIterator(this, genre);
+    }
+
+    // 최신 책부터 오래된 책 순서로 순회하는 Iterator
+    public Iterator<Book> iteratorByYear() {
+        return new YearDescIterator(this);
+    }
+
 }
