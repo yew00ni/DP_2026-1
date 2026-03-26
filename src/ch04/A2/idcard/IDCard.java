@@ -4,7 +4,7 @@ import ch04.A2.framework.Product;
 
 public class IDCard extends Product {
     private String owner;
-    private int serial;
+    private int serial; // 신분증의 일련 번호를 저장하는 필드
 
     IDCard(String owner, int serial) {
         System.out.println(owner + "의 카드를 " + serial + "번으로 만듭니다.");
