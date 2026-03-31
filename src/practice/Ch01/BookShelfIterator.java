@@ -1,4 +1,4 @@
-package practice.Ch01;
+package practice.ch01;
 
 import java.util.Iterator; // Java.util은 Java가 기본으로 제공하는 패키지, Iterator라는 인터페이스를 import하여 사용, 제너릭
 import java.util.NoSuchElementException;

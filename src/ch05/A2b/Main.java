@@ -6,6 +6,7 @@ public class Main {
         Triple a1 = Triple.getInstance("ALPHA");
         Triple b1 = Triple.getInstance("BETA");
         Triple c1 = Triple.getInstance("GAMMA");
+        
         Triple a2 = Triple.getInstance("ALPHA");
         Triple b2 = Triple.getInstance("BETA");
         Triple c2 = Triple.getInstance("GAMMA");
