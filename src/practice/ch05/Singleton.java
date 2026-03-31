@@ -3,11 +3,11 @@ package practice.ch05;
 // 싱글톤 패턴 적용하기
 public class Singleton {
     // (3) Singleton 객체를 미리 하나 만들어서 static 변수에 저장해 놓는다.
-    // 클래스 로드 시 실행됨
+    // 클래스 로드 시 실행됨(객체가 이때 생성됨)
     private static Singleton singleton = new Singleton(); // 미리 하나 만들어서 클래서에 저장해 놓음
     
     // (1) 생성자를 private으로 한다.
-    private Singleton() {
+    private Singleton() { // 외부에서 객체를 생성하지 못하도록
         System.out.println("Singleton 객체가 생성됩니다.");
     }
 
