@@ -8,7 +8,7 @@ public class Singleton {
         slowdown(); // 생성 시간이 오래 걸리도록 함
     }
 
-    public static Singleton getInstance() {
+    public static synchronized Singleton getInstance() { // synchronized : 두 사람이 시간 관점에서 서로 맞춤(한쪽이 하면 한쪽은 쉬는 방식)
         if (singleton == null) { // singleton이 아직 생성되지 않았다면(null이라면), 첫 번째 호출 시에만 인스턴스가 생성됨
             singleton = new Singleton();
         }
