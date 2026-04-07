@@ -2,7 +2,7 @@ package ch06.A1b;
 
 import ch06.A1b.framework.ConcreteProduct;
 
-public class MessageBox extends ConcreteProduct {
+public class MessageBox extends ConcreteProduct { // ConcreteProduct 클래스를 상속받은 클래스
     private char decochar;
 
     public MessageBox(char decochar) {

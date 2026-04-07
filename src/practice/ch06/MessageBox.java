@@ -29,7 +29,7 @@ public class MessageBox implements Product {
     public Product createCopy() {
         Product p = null;
         try {
-            p = (Product)clone();
+            p = (Product)clone(); // 자기 복제
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }

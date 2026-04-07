@@ -1,6 +1,6 @@
 package ch06.A1a.framework;
 
-public abstract class Product implements Cloneable {
+public abstract class Product implements Cloneable { // 추상클래스(인터페이스가 아님)
     public abstract void use(String s);
 
     public Product createCopy() {

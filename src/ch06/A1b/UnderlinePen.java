@@ -2,7 +2,7 @@ package ch06.A1b;
 
 import ch06.A1b.framework.ConcreteProduct;
 
-public class UnderlinePen extends ConcreteProduct {
+public class UnderlinePen extends ConcreteProduct { // ConcreteProduct 클래스를 상속받은 클래스
     private char ulchar;
 
     public UnderlinePen(char ulchar) {
