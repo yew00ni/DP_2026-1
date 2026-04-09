@@ -1,6 +1,5 @@
 package practice.ch06;
 
-import practice.ch06.MessageBox;
 import practice.ch06.framework.Manager;
 
 public class Main {
