@@ -16,13 +16,13 @@ public class Main {
         */
 
         // 플레이어 2명 생성
-        Player player1 = new Player("임예원", new WinningStrategy(314)); // 자식 strategy를 줘도 잘 작동
+        Player player1 = new Player("임예원", new WinningStrategy(314)); // 자식 strategy를 줘도 잘 작동(다형성)
         Player player2 = new Player("손흥민", new WinningStrategy(15));
 
         // 게임 시키기
 
         for (int i = 0; i < 10; i++) {
-            Hand h1 = player1.nextHand();
+            Hand h1 = player1.nextHand(); // 손을 얻어옴
             Hand h2 = player2.nextHand();
 
             if (h1.isStrongerThan(h2)) {

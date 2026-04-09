@@ -8,7 +8,7 @@ public class WinningStrategy implements Strategy {
     private Hand prevHand; // 이전에 낸 손
 
     public WinningStrategy(int seed) { // 생성자
-        random = new Random(seed); // seed를 받아서 랜덤 생성자 초기화
+        random = new Random(seed); // seed를 받아서 랜덤 생성자 초기화(seed에 따라서 다른 순서로 임의의 숫자가 만들어짐)
     }
 
     @Override
@@ -21,6 +21,6 @@ public class WinningStrategy implements Strategy {
 
     @Override
     public void study(boolean win) {
-        won = win;
+        won = win; // true or false
     }
 }
