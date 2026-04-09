@@ -13,9 +13,9 @@ public class Main1 {
         logger1b.log("Static Message 2");
 
         if (logger1a == logger1b) {
-            System.out.println("✔️ 동일한 인스턴스");
+            System.out.println("✓ 동일한 인스턴스");
         } else {
-            System.out.println("❌ 다른 인스턴스");
+            System.out.println("✗ 다른 인스턴스");
         }
 
         System.out.println("\n========== 로그 출력 1 ==========");

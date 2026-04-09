@@ -13,9 +13,9 @@ public class Main2 {
         logger2b.log("Synchronized Message 2");
 
         if (logger2a == logger2b) {
-            System.out.println("✔️ 동일한 인스턴스");
+            System.out.println("✓ 동일한 인스턴스");
         } else {
-            System.out.println("❌ 다른 인스턴스");
+            System.out.println("✗ 다른 인스턴스");
         }
 
         System.out.println("\n========== 로그 출력 2 ==========");
