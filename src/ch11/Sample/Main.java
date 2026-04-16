@@ -7,9 +7,17 @@ public class Main {
         Directory bindir = new Directory("bin");
         Directory tmpdir = new Directory("tmp");
         Directory usrdir = new Directory("usr");
+        Directory yewon = new Directory("yewon");
+
         rootdir.add(bindir);
         rootdir.add(tmpdir);
         rootdir.add(usrdir);
+        rootdir.add(yewon);
+
+        yewon.add(new File("yewon1", 100));
+        yewon.add(new File("yewon2", 200));
+        yewon.add(new File("yewon3", 300));
+        
         bindir.add(new File("vi", 10000));
         bindir.add(new File("latex", 20000));
         rootdir.printList();
