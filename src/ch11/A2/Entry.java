@@ -33,9 +33,9 @@ public abstract class Entry {
         StringBuilder fullname = new StringBuilder();
         Entry entry = this;
         do {
-            fullname.insert(0, entry.getName());
+            fullname.insert(0, entry.getName()); // StringBuilder의 insert 메서드를 이용
             fullname.insert(0, "/");
-            entry = entry.parent;
+            entry = entry.parent; // 현재 객체의 부모를 다시 entry에 넣음 -> 부모가 null이 될 때까지 반복한다 => 부모로 이동하는 것(루트까지 이동)
         } while (entry != null);
         return fullname.toString();
     }

@@ -33,7 +33,7 @@ public class Directory extends Entry {
         }
     }
 
-    public Entry add(Entry entry) {
+    public Entry add(Entry entry) { // 자식 객체 추가 시에 자식 객체의 부모를 설정한다
         directory.add(entry);
         entry.setParent(this);
         return this;
