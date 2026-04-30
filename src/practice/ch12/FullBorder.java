@@ -24,7 +24,7 @@ public class FullBorder extends Border {
         } else if (row == display.getRows() + 1) { // 요청한 게 하단 테두리인 경우
             return "+" + makeLine('-', display.getColumns()) + "+";
         } else { // 기타
-            return "|" + display.getRowText(row - 1) + "|";
+            return "|" + display.getRowText(row - 1) + "|"; // 위임
         }
     }
 
