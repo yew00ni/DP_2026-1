@@ -2,6 +2,9 @@ package hw.ch12;
 
 public class Main {
     public static void main(String[] args) {
+        System.out.println("학번 : 20240823 / 이름 : 임예원");
+        System.out.println("\n");
+
         MultiStringDisplay md = new MultiStringDisplay();
 
         // [2-1] 원본 출력
