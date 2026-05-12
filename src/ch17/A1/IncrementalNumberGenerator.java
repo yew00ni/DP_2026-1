@@ -2,8 +2,8 @@ package ch17.A1;
 
 public class IncrementalNumberGenerator extends NumberGenerator {
     private int number;	// 현재 수 
-    private int end;		// 종룟값(이 값은 포함하지 않는다)
-    private int inc;		// 증갓값 
+    private int end; // 종룟값(이 값은 포함하지 않는다)
+    private int inc; // 증갓값 
 
     public IncrementalNumberGenerator(int start, int end, int inc) {
         this.number = start;
@@ -22,7 +22,7 @@ public class IncrementalNumberGenerator extends NumberGenerator {
     public void execute() {
         while (number < end) {
             notifyObservers();
-            number += inc;
+            number += inc; // number를 inc씩 증가시킴
         }
     }
 }
