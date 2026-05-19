@@ -12,9 +12,9 @@ public class NoonState implements State {
 
     @Override
     public void doClock(Context context, int hour) {
-        if (hour < 9 || 17 <= hour) {
+        if (hour < 9 || 17 <= hour) { // 9시 이전과 17시 이후는 야간으로 전환
             context.changeState(NightState.getInstance());
-        } else if (9 <= hour && hour < 12 || 13 <= hour && hour < 17) {
+        } else if (9 <= hour && hour < 12 || 13 <= hour && hour < 17) { // 9시부터 12시, 13시부터 17시는 점심 시간으로 유지
             context.changeState(DayState.getInstance());
         }
     }

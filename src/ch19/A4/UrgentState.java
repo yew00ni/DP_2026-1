@@ -13,6 +13,8 @@ public class UrgentState implements State {
     @Override
     public void doClock(Context context, int hour) {	// 시간 설정 
         // 시간 설정에서는 아무 처리도 하지 않는다 
+
+        // context.changeState(NightState.getInstance()); // 다른 상태로 빠져나가는 부분 필요
     }
 
     @Override
