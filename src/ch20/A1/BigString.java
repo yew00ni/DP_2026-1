@@ -11,9 +11,9 @@ public class BigString {
 
     // 생성자(인수로 공유할지 말지 지정한다)
     public BigString(String string, boolean shared) {
-        if (shared) {
+        if (shared) { // shared가 true이면 BigChar를 공유
             initShared(string);
-        } else {
+        } else { // shared가 false이면 BigChar를 공유하지 않고 새로 생성
             initUnshared(string);
         }
     }
@@ -31,7 +31,7 @@ public class BigString {
     private void initUnshared(String string) {
         bigchars = new BigChar[string.length()];
         for (int i = 0; i < bigchars.length; i++) {
-            bigchars[i] = new BigChar(string.charAt(i));
+            bigchars[i] = new BigChar(string.charAt(i)); // BigCharFactory를 사용하지 않고 BigChar 인스턴스를 새로 생성
         }
     }
 
