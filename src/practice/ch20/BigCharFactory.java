@@ -21,10 +21,10 @@ public class BigCharFactory {
 
     // BigChar 인스턴스 생성(공유)
     public synchronized BigChar getBigChar(char charname) { // '3'이 들어왔다고 가정
-    // 이미 만들어진 BigChar 인스턴스가 있는지 검색
-        BigChar bc = pool.get(String.valueOf(charname));
+        // 이미 만들어진 BigChar 인스턴스가 있는지 검색
+        BigChar bc = pool.get(String.valueOf(charname)); // 3을 String으로 바꿈 -> pool.get("3")
 
-        if (bc == null) { // 이미 만들어진 BitChar 인스턴스가 없다면
+        if (bc == null) { // 이미 만들어진 BigChar 인스턴스가 없다면
             // 여기서 BigChar 인스턴스를 생성
             bc = new BigChar(charname);
             pool.put(String.valueOf(charname), bc);
