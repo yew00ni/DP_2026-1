@@ -60,16 +60,16 @@ public class Main extends JFrame implements MouseMotionListener, WindowListener 
 
     // WindowListener용 
     @Override
-    public void windowClosing(WindowEvent e) {
-        System.exit(0);
+    public void windowClosing(WindowEvent e) { // X 버튼 눌렀을 때 실행
+        System.exit(0); // 이 부분이 있어야 비로소 프로그램이 종료되고 없으면 윈도우만 사라짐
     }
 
-    @Override public void windowActivated(WindowEvent e) {}
-    @Override public void windowClosed(WindowEvent e) {}
-    @Override public void windowDeactivated(WindowEvent e) {}
-    @Override public void windowDeiconified(WindowEvent e) {}
-    @Override public void windowIconified(WindowEvent e) {}
-    @Override public void windowOpened(WindowEvent e) {}
+    @Override public void windowActivated(WindowEvent e) {} // 창이 포커스를 받았을 때 실행
+    @Override public void windowClosed(WindowEvent e) {} // 창이 닫혔을 때 실행
+    @Override public void windowDeactivated(WindowEvent e) {} // 창이 포커스를 잃었을 때 실행
+    @Override public void windowDeiconified(WindowEvent e) {} // 창이 다시 보일 때 실행
+    @Override public void windowIconified(WindowEvent e) {} // 숨기기 버튼 눌렀을 때 실행
+    @Override public void windowOpened(WindowEvent e) {} // 창이 처음 열렸을 때 실행
 
     public static void main(String[] args) {
         new Main("Command Pattern Sample"); // Main 객체가 생성되고 생성자에서 창이 보이게 됨

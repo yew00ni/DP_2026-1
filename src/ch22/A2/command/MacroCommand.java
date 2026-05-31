@@ -26,7 +26,7 @@ public class MacroCommand implements Command {
     // 마지막 명령을 삭제
     public void undo() {
         if (!commands.isEmpty()) {
-            commands.pop();
+            commands.pop(); // 최근 명령 객체를 제거
         }
     }
 

@@ -19,13 +19,13 @@ public class Main extends JFrame {
     public Main(String title) {
         super(title);
 
-        this.addWindowListener(new WindowAdapter() {
-            public void windowClosing(WindowEvent e) {
+        this.addWindowListener(new WindowAdapter() { // 익명의 내부 클래스
+            public void windowClosing(WindowEvent e) { // 필요한 메서드만 구현
                 System.exit(0);
             }
         });
 
-        canvas.addMouseMotionListener(new MouseMotionAdapter() {
+        canvas.addMouseMotionListener(new MouseMotionAdapter() { // 익명의 내부 클래스
             public void mouseDragged(MouseEvent e) {
                 Command cmd = new DrawCommand(canvas, e.getPoint());
                 history.append(cmd);
