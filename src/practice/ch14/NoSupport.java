@@ -7,6 +7,6 @@ public class NoSupport extends Support {
 
     @Override
     protected boolean resolve(Trouble trouble) {
-        return false; // 자신은 아무것도 해결하지 않는다
+        return false; // 자신은 아무것도 해결하지 않는다(무조건 false를 반환)
     }
 }

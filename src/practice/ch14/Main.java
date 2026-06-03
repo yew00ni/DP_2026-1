@@ -1,11 +1,21 @@
 package practice.ch14;
 
-import ch14.A3.NoSupport;
-
 public class Main {
     public static void main(String[] args) {
-        Trouble t1 = new Trouble(100);
+        // 해결자 생성
+        Support alice = new NoSupport("Alice");
+        Support bob = new LimitSupport("Bob", 100);
+        Support charlie = new SpecialSupport("Charlie", 429);
+        Support diana = new OddSupport("Diana");
 
-        NoSupport s1 = new NoSupport("no support");
+        // 사슬 형성
+        alice.setNext(bob).setNext(charlie).setNext(diana); // alice -> bob -> charlie -> diana
+
+        // 첫 해결자에게 트러블을 던져줌
+        for (int i = 0; i < 500; i += 33) {
+            alice.support(new Trouble(i));
+        }
+
+        // alice.support(new Trouble(100));
     }
 }

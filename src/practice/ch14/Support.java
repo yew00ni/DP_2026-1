@@ -17,11 +17,12 @@ public abstract class Support { // 추상 클래스
     }
 
     // 트러블 해결을 요청하는 메서드(클라이언트가 해당 문제를 해결해달라고 요청할 때 호출하는 메서드)
+    // 템플릿 메서드
     public void support(Trouble trouble) {
         if (resolve(trouble)) { // resolve : 해결하는 메서드, 자기가 해결하려고 함
             done(trouble); // 성공하면 해결했다고 선언
         } else if (next != null) { // 자기가 해결 못 했는데 뒷 사람이 있으면, 즉 떠넘길 곳이 있는지 확인
-            next.support(trouble); // 뒷사람에게 해결을 떠넘김
+            next.support(trouble); // 뒷사람에게 해결을 떠넘김(재귀적 호출)
         } else { // 자기도 해결 못 했고, 뒷사람도 없으면...
             fail(trouble); // 해결 못했다고 선언
         }

@@ -17,13 +17,13 @@ public abstract class Support {
 
     // 트러블 해결 절차를 결정한다 
     public void support(Trouble trouble) {
-        for (Support obj = this; true; obj = obj.next) {
-            if (obj.resolve(trouble)) {
-                obj.done(trouble);
-                break;
+        for (Support obj = this; true; obj = obj.next) { // obj : 현재 해결자, true : 무한 루프, obj = obj.next : 다음 해결자로 이동
+            if (obj.resolve(trouble)) { // obj가 해결할 수 있으면
+                obj.done(trouble); // 해결했다고 선언(성공)
+                break; // 루프 종료(루프를 빠져나감)
             } else if (obj.next == null) {
-                obj.fail(trouble);
-                break;
+                obj.fail(trouble); // 실패
+                break; // 루프 종료(루프를 빠져나감)
             }
         }
     }

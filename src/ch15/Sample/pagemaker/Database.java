@@ -12,7 +12,7 @@ public class Database {
     public static Properties getProperties(String dbname) throws IOException {
         String filename = dbname + ".txt";
         Properties prop = new Properties();
-        prop.load(new FileReader(filename));
+        prop.load(new FileReader(filename)); // 프러퍼티 파일에서 데이터를 읽어들임
         return prop;
     }
 }
