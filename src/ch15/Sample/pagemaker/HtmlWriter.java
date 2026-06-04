@@ -26,17 +26,17 @@ public class HtmlWriter {
 
     // 단락 출력
     public void paragraph(String msg) throws IOException {
-        writer.write("<p>" + msg + "</p>");
+        writer.write("<p>" + msg + "</p>"); // <p> 태그 이용
         writer.write("\n");
     }
 
-    // 링크 출력
+    // 링크 출력(하이퍼링크)
     public void link(String href, String caption) throws IOException {
         // <a href="http://www.aozora.gr.jp/">...</a>
         paragraph("<a href=\"" + href + "\">" + caption + "</a>");
     }
 
-    // 이메일 주소 출력 
+    // 이메일 주소 출력(메일에 대한 하이퍼링크)
     public void mailto(String mailaddr, String username) throws IOException {
         link("mailto:" + mailaddr, username); // mailto:로 시작하는 링크를 만들어준다(하이퍼링크)
     }

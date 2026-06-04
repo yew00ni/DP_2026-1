@@ -38,7 +38,9 @@ public class PrinterProxy implements Printable {
     private synchronized void realize() {
         if (real == null) {
             try {
-                real = (Printable)Class.forName(className).getDeclaredConstructor().newInstance();
+                // 클래스 이름을 이용해서 객체를 생성
+                real = (Printable)Class.forName(className).getDeclaredConstructor().newInstance(); // 타입캐스팅을 통해서 넣어줌
+                
                 real.setPrinterName(name);
             } catch (ClassNotFoundException e) {
                 System.out.println("클래스 " + className + " 가 발견되지 않습니다.");
